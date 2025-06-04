@@ -30,3 +30,28 @@ elif ft == ".txt":
 else:
     print("application/octet-stream")
 
+
+#Optmized Code
+'''
+# Prompt user
+filename = input("File Name: ").strip().lower()
+
+# Define MIME types
+mime_types = {
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".gif": "image/gif",
+    ".pdf": "application/pdf",
+    ".txt": "text/plain",
+    ".zip": "application/zip"
+}
+
+# Extract extension
+import os
+_, ext = os.path.splitext(filename)
+
+# Get and print the MIME type
+print(mime_types.get(ext, "application/octet-stream"))
+'''
+
