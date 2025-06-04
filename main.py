@@ -1,32 +1,25 @@
-# Calculator
-import math
+# Harvard exercise number 2
+# Greeting Hello = $0
+# Greeting starts with 'h' = $20
+# No H in greeting = $100
 
-while True:
-    op = input("Select your operator: (+, -, *, / , p, E to Exit) ")
+# Ask user for greeting
 
-    if op == "E":
-        break
+print("\n")
+g = input("Greeting: ")
 
-    n1 = int(input("First number: "))
-    n2 = int(input("Second number: "))
-    
-    
-    if op == "+":
-        result = n1 + n2
-        print(result)
-    elif op == "-":
-        result = n1 - n2
-        print(result)
-    elif op == "*":
-        result = n1 * n2
-        print(result)
-    elif op == "p":
-        result = pow(n1, n2)
-        print(result)
-    elif op == "/":
-        result = n1 / n2
-        if n2 == 0:
-         print("Error: Division by zero!")
-    else:
-        result = n1 / n2
-        print(result)
+# Analise greeting for reward
+
+g = g.lower()
+
+g.find("h")
+
+if g == "hello":
+    print("$0")
+    exit(0)
+elif g.find("h") == 0:
+    print("$20")
+else:
+    print("$100")
+
+exit(0)
